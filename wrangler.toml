@@ -1,0 +1,10 @@
+name = "line-notifier-bot"
+main = "src/index.ts"
+compatibility_date = "2024-03-12"
+
+[vars]
+LINE_NOTIFY_API_URL = "https://notify-api.line.me/api/"
+THE_CAT_API_URL = "https://api.thecatapi.com/v1/"
+
+[triggers]
+crons = ["0 14 * * *"]

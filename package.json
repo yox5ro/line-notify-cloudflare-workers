@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "wrangler dev",
+    "check": "npx @biomejs/biome check --apply ./src"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.6.1",
+    "@cloudflare/workers-types": "^4.20240222.0",
+    "wrangler": "^3.32.0"
+  }
+}
