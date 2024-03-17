@@ -5,6 +5,7 @@ compatibility_date = "2024-03-12"
 [vars]
 LINE_NOTIFY_API_URL = "https://notify-api.line.me/api/"
 THE_CAT_API_URL = "https://api.thecatapi.com/v1/"
+BOBOBO_IMAGE_URL = "https://www.toei-anim.co.jp/tv/bo-bobo/images/top/mainv_chara_center.png"
 
 [triggers]
 crons = ["0 14 * * *"]
