@@ -2,6 +2,7 @@ interface Env {
 	LINE_NOTIFY_API_TOKEN: string;
 	LINE_NOTIFY_API_URL: string;
 	THE_CAT_API_URL: string;
+	BOBOBO_IMAGE_URL: string;
 }
 
 type LINENotifyResponse = {
@@ -65,7 +66,10 @@ export default {
 	async scheduled(event: ScheduledEvent, env: Env, ctx: ExecutionContext) {
 		const words = ["ボ", "・ボ", "ーボ"];
 		const message = generateRandomStringFromArray(words, 7);
-		const catImage = await fetchCatImage(env);
-		await notifyLINE(env, message, catImage, catImage);
+		const imageUrl =
+			message === "ボボボーボ・ボーボボ"
+				? env.BOBOBO_IMAGE_URL
+				: await fetchCatImage(env);
+		await notifyLINE(env, message, imageUrl, imageUrl);
 	},
 };
